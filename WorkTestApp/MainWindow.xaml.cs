@@ -21,6 +21,7 @@ namespace WorkTestApp
         public MainWindow()
         {
             InitializeComponent();
+            MessageBox.Show($"{ThirdApp.IsPalindrome("А роза упала, на лапу Азора")}");
         }
     }
 }
