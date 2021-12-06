@@ -16,12 +16,20 @@ namespace WorkTestApp
             int overflow = 0;
             if (firstNumber.Count > secondNumber.Count)
             {
-                while (item1 != null)
+                while (item1 != null) //TODO
                 {
-                    resultList.AddLast(((item1.Value + item2.Value) % 10) + overflow);
-                    overflow = (item1.Value + item2.Value) / 10;
-                    item1 = item1.Next;
-                    item2 = item2.Next;
+                    if (item2 != null)
+                    {
+                        resultList.AddLast((item1.Value + item2.Value + overflow) % 10) ;
+                        overflow = (item1.Value + item2.Value+ overflow) / 10;
+                        item1 = item1.Next;
+                        item2 = item2.Next;
+                    }
+                    else
+                    {
+                        resultList.AddLast(item1.Value+overflow);                        
+                        item1 = item1.Next;                        
+                    }
                 }
                 return resultList;
             }
@@ -29,10 +37,18 @@ namespace WorkTestApp
             {
                 while (item2 != null)
                 {
-                    resultList.AddLast(((item1.Value + item2.Value) % 10) + overflow);
-                    overflow = (item1.Value + item2.Value) / 10;
-                    item1 = item1.Next;
-                    item2 = item2.Next;
+                    if (item1 != null)
+                    {
+                        resultList.AddLast((item1.Value + item2.Value + overflow) % 10);
+                        overflow = (item1.Value + item2.Value+ overflow) / 10;
+                        item1 = item1.Next;
+                        item2 = item2.Next;
+                    }
+                    else
+                    {
+                        resultList.AddLast(item2.Value+overflow);
+                        item2 = item2.Next;
+                    }
                 }
                 return resultList;
             }
