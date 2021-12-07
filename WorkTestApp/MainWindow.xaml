@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="TestProject" Height="450" Width="800">
     <Grid>
-        <TabControl>
+        <TabControl >
             <TabItem Header="FirstApp">
                 <Grid Background="White">
                     <Grid.RowDefinitions>
