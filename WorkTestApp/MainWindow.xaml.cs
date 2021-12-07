@@ -81,7 +81,7 @@ namespace WorkTestApp
         }
         private void Click_Button_3(object sender, RoutedEventArgs e)
         {
-            if (TextB.Text == "") MessageBox.Show("Введите строку");
+            if (TextB.Text == "") MessageBox.Show("Пустая строка","Ошибка",MessageBoxButton.OK, MessageBoxImage.Error);
             else
             {
                 if (ThirdApp.IsPalindrome(TextB.Text)) Result.Text = "Строка палиндром";
