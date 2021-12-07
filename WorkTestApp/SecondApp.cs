@@ -1,8 +1,6 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace WorkTestApp
 {
@@ -10,49 +8,39 @@ namespace WorkTestApp
     {
         public static LinkedList<int> SumTwoLists(LinkedList<int> firstNumber, LinkedList<int> secondNumber)
         {
-            var resultList = new LinkedList<int>();
+            
             var item1 = firstNumber.First;
             var item2 = secondNumber.First;
-            int overflow = 0;
-            if (firstNumber.Count > secondNumber.Count)
-            {
-                while (item1 != null) //TODO
-                {
-                    if (item2 != null)
-                    {
-                        resultList.AddLast((item1.Value + item2.Value + overflow) % 10) ;
-                        overflow = (item1.Value + item2.Value+ overflow) / 10;
-                        item1 = item1.Next;
-                        item2 = item2.Next;
-                    }
-                    else
-                    {
-                        resultList.AddLast(item1.Value+overflow);                        
-                        item1 = item1.Next;                        
-                    }
-                }
-                return resultList;
-            }
-            else
-            {
-                while (item2 != null)
-                {
-                    if (item1 != null)
-                    {
-                        resultList.AddLast((item1.Value + item2.Value + overflow) % 10);
-                        overflow = (item1.Value + item2.Value+ overflow) / 10;
-                        item1 = item1.Next;
-                        item2 = item2.Next;
-                    }
-                    else
-                    {
-                        resultList.AddLast(item2.Value+overflow);
-                        item2 = item2.Next;
-                    }
-                }
-                return resultList;
-            }
+
+            if (firstNumber.Count > secondNumber.Count) return Sum(item1, item2);
+            else return Sum(item2, item1);
             
+            
+        }
+
+        private static LinkedList<int> Sum(LinkedListNode<int> x, LinkedListNode<int> y)
+        {
+            var resultList = new LinkedList<int>();
+            int overflow = 0;
+
+            while (x != null)
+            {
+                if (y != null)
+                {
+                    resultList.AddLast((x.Value + y.Value + overflow) % 10);
+                    overflow = (x.Value + y.Value + overflow) / 10;
+                    x = x.Next;
+                    y = y.Next;
+                    if (x == null && overflow ==1) resultList.AddLast(overflow); 
+                }
+                else 
+                {
+                    resultList.AddLast((x.Value + overflow) % 10);
+                    overflow = (x.Value + overflow) / 10;
+                    x = x.Next;
+                }
+            }
+            return resultList;
         }
         
     }
