@@ -37,19 +37,22 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Задание 1. Реализовать приложение C#, которое предоставит функционал сложения каждого второго нечетного числа из массива чисел тела запроса и вернёт их сумму по модулю." TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,5,0"/>
-                    <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Для вычислений используется массив из 15 элементов. Массив заполняется генератором случайных чисел числами в диапазоне от -200 до 200 . Расчет модуля суммы осуществляется автоматически." TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <Button Content=" Сгенерировать массив "  Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF62DCD1" Click="Click_Button"/>
-                    <TextBlock Grid.Row="2" Grid.Column="0"  Text="Массив :" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
-                    <TextBlock x:Name="M" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"  Text="" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#FFEE0000" />
-                    <TextBlock Grid.Row="3" Grid.Column="0"  Text="Сумма по модулю :" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
-                    <TextBlock x:Name="S" Grid.Row="3" Grid.Column="1"  Text="" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#FFEE0000"/>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Задание 2. Реализовать приложение C#, которое предоставит функционал сложения двух непустых связанных списков, представляющих два положительных целых числа. Цифры хранятся в обратном порядке, каждый из их узлов содержит одну цифру. Реализуйте алгоритм сложения связанных списков, не переводя хранящиеся в них данные в числовой тип (по-узловое сложение), возвращающий результат в виде связанного списка." TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,5,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Связанные списки, представляющие положительные целые числа формируются генератором случайных чисел." TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Content=" Сгенерировать связанные списки "  Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF62DCD1" Click="Click_Button_2"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0"  Text="Первый связанный список :" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="FirstLinkedList" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"  Text="" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#FFEE0000" />
+                    <TextBlock Grid.Row="3" Grid.Column="0"  Text="Второй связанный список :" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="SecondLinkedList" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Text="" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#FFEE0000"/>
+                    <TextBlock Grid.Row="4" Grid.Column="0"  Text="Сумма связных списков :" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="SumTwoLinkedLists" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Text="" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#FFEE0000"/>
                 </Grid>
             </TabItem>
             <TabItem Header="ThirdApp">

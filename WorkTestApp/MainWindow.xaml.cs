@@ -49,7 +49,7 @@ namespace WorkTestApp
             }
             New.Text = str;*/
 
-            //New.Text=FirstApp.SumMod(nev).ToString();
+            
 
 
         }
@@ -63,6 +63,20 @@ namespace WorkTestApp
             Massive.Text = $"[{string.Join(",",mas)}]";
             SumMod.Text = FirstApp.SumMod(mas).ToString();
             
+        }
+        private void Click_Button_2(object sender, RoutedEventArgs e)
+        {
+
+            var firstList = new LinkedList<int>();
+            var secondList = new LinkedList<int>();
+            var rand = new Random();
+            var latestI = rand.Next(1, 5);
+            for (int i = 0; i < latestI; i++) firstList.AddLast(rand.Next(1,10));
+            latestI = rand.Next(1, 5);
+            for (int i = 0; i < latestI; i++) secondList.AddLast(rand.Next(1, 10));           
+            FirstLinkedList.Text = $"[{string.Join(",", firstList)}]"; 
+            SecondLinkedList.Text= $"[{string.Join(",", secondList)}]";            
+            SumTwoLinkedLists.Text= $"[{string.Join(",", SecondApp.SumTwoLists(firstList, secondList))}]";
         }
     }
 }
