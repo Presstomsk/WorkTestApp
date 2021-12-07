@@ -6,7 +6,7 @@ namespace WorkTestApp
 {
     public static class FirstApp
     {
-        public static int SumMod(List<int> numbers)
+        public static int SumMod(int[] numbers)
         {
             int sum = 0;
             int count = 0;            

@@ -54,6 +54,15 @@ namespace WorkTestApp
 
         }
 
-
+        private void Click_Button(object sender, RoutedEventArgs e)
+        {
+                     
+            var mas = new int[15];
+            var rand = new Random();
+            for (int i = 0; i < mas.Length; i++) mas[i] = rand.Next(-200, 201);            
+            Massive.Text = $"[{string.Join(",",mas)}]";
+            SumMod.Text = FirstApp.SumMod(mas).ToString();
+            
+        }
     }
 }

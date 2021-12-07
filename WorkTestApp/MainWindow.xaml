@@ -5,9 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorkTestApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="TestProject" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="New" HorizontalAlignment="Left" Margin="284,172,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="274" Height="148"/>
-
+        <TabControl>
+            <TabItem Header="FirstApp">
+                <Grid Background="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Задание 1. Реализовать приложение C#, которое предоставит функционал сложения каждого второго нечетного числа из массива чисел тела запроса и вернёт их сумму по модулю." TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,5,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Для вычислений используется массив из 15 элементов. Массив заполняется генератором случайных чисел числами в диапазоне от -200 до 200 . Расчет модуля суммы осуществляется автоматически." TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Content=" Сгенерировать массив "  Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF62DCD1" Click="Click_Button"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0"  Text="Массив :" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="Massive" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"  Text="" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#FFEE0000" />
+                    <TextBlock Grid.Row="3" Grid.Column="0"  Text="Сумма по модулю :" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="SumMod" Grid.Row="3" Grid.Column="1"  Text="" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#FFEE0000"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="SecondApp">
+                <Grid Background="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Задание 1. Реализовать приложение C#, которое предоставит функционал сложения каждого второго нечетного числа из массива чисел тела запроса и вернёт их сумму по модулю." TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,5,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Для вычислений используется массив из 15 элементов. Массив заполняется генератором случайных чисел числами в диапазоне от -200 до 200 . Расчет модуля суммы осуществляется автоматически." TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Content=" Сгенерировать массив "  Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF62DCD1" Click="Click_Button"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0"  Text="Массив :" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="M" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"  Text="" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#FFEE0000" />
+                    <TextBlock Grid.Row="3" Grid.Column="0"  Text="Сумма по модулю :" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="S" Grid.Row="3" Grid.Column="1"  Text="" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#FFEE0000"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="ThirdApp">
+                <Grid Background="White"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
