@@ -77,6 +77,17 @@ namespace WorkTestApp
             FirstLinkedList.Text = $"[{string.Join(",", firstList)}]"; 
             SecondLinkedList.Text= $"[{string.Join(",", secondList)}]";            
             SumTwoLinkedLists.Text= $"[{string.Join(",", SecondApp.SumTwoLists(firstList, secondList))}]";
+            
+        }
+        private void Click_Button_3(object sender, RoutedEventArgs e)
+        {
+            if (TextB.Text == "") MessageBox.Show("Введите строку");
+            else
+            {
+                if (ThirdApp.IsPalindrome(TextB.Text)) Result.Text = "Строка палиндром";
+                else Result.Text = "Строка не палиндром";
+            }
+
         }
     }
 }
